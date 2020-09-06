@@ -23,7 +23,13 @@
  * <tr><td>Tx            <td>Transmitter
  * </table>
  *
-*/
+ *
+ * @cond ALL_DOCS
+ * @section other_docs_sec Other Design Details
+ * @subsection first_doc The first other doc.
+ * This is the only other doc.
+ * @endcond
+ */
 
 // Doxygen Page for Page 1
 /*! @page page_1 Page 1
