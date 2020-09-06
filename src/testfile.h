@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief
- * This file declares the public API data types, structures and functions that comprise the CDI log API.
+ * This file declares the public API data types, structures and functions that comprise the Test File.
  */
 
 // Doxygen for Test File
