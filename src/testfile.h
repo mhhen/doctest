@@ -4,20 +4,20 @@
  * This file declares the public API data types, structures and functions that comprise the CDI log API.
  */
 
-// Doxygen for CDI-LOG
-/** @page Log_home_page CDI Log (CDI-LOG) API Home Page
+// Doxygen for Test File
+/** @page test_file_page Test File Home Page
  * @tableofcontents
  *
- * @section Log_arch CDI-LOG Architecture
+ * @section test_file_arch Test File Architecture
  */
  
  
 /**
- * Send log messages to stderr in addition to log files, if log files are enabled.
+ * Do this function and be happy forever.
  *
  * @param enable Use true to enable, false to disable.
- * @param level Log level to enable output to stderr.
+ * @param level Happiness level to enable.
  *
- * @return A value from the CdiReturnStatus enumeration.
+ * @return A value from 1 to 10 of how happy you'll be.
  */
-int CdiLogStderrEnable(bool enable, int level);
+int MakeMeHappy(bool enable, int level);
