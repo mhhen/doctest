@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v2
     
     # Build the HTML documentation
-    - run: echo '::set-env name=doxygen_exclude::src/testfile.h'
+    #- run: echo '::set-env name=doxygen_exclude::src/testfile.h'
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
       with:
