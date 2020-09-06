@@ -15,6 +15,7 @@ jobs:
     
     # Build the HTML documentation
     - run: echo '::set-env name=doxygen_exclude::src/testfile2.h'
+    - run: echo '::set-env name=doxygen_enabled_sections::ALL_DOCS'
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
       with:
