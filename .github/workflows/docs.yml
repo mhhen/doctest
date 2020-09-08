@@ -18,11 +18,13 @@ jobs:
     - run: echo '::set-env name=doxygen_enabled_sections::ALL_DOCS'
     - run: echo '::set-env name=doc_dir::docs_out'
     - run: mkdir -p docs_out
+    - run: pwd docs_out
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
       with:
           doxyfile-path: ./doc/Doxyfile
           working-directory: .
+    - run: ls docs_out
     
     # Deploy the HTML documentation to GitHub Pages
     - name: GH Pages Deployment
