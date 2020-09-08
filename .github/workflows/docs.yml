@@ -20,7 +20,7 @@ jobs:
       uses: mattnotmitt/doxygen-action@v1.1.0
       with:
           doxyfile-path: ./doc/Doxyfile
-          working-directory: .
+          working-directory: ./html/
     
     # Deploy the HTML documentation to GitHub Pages
     - name: GH Pages Deployment
