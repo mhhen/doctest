@@ -16,18 +16,19 @@ jobs:
     # Build the HTML documentation
     - run: echo '::set-env name=doxygen_exclude::src/testfile2.h'
     - run: echo '::set-env name=doxygen_enabled_sections::ALL_DOCS'
+    - run: mkdir -p docs_out
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
       with:
           doxyfile-path: ./doc/Doxyfile
-          working-directory: ./html/
+          working-directory: ./docs_out
     
     # Deploy the HTML documentation to GitHub Pages
     - name: GH Pages Deployment
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./html/
+        publish_dir: ./doc/html/
         enable_jekyll: false
         allow_empty_commit: false
         force_orphan: true
