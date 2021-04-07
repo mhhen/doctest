@@ -1,7 +1,7 @@
 /**
  * @file
  * @brief
- * This file declares the public API data types, structures and functions that comprise the Test File 2.
+ * This file declares the public API data types, structures and functions, etc. that comprise the Test File 2.
  */
 
 // Doxygen for Test File 2
