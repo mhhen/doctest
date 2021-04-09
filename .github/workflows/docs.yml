@@ -39,4 +39,4 @@ jobs:
         allow_empty_commit: false
         force_orphan: true
         publish_branch: gh-pages
-        destination_dir: ${GITHUB_REF##*/}/html
+        destination_dir: ${{ GITHUB_REF##*/ }}/html
