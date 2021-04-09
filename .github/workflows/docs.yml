@@ -14,9 +14,9 @@ jobs:
     - uses: actions/checkout@v2
     
     # Build the HTML documentation
-    - run: echo '::set-env name=doxygen_exclude::src/testfile2.h'
-    - run: echo '::set-env name=doxygen_enabled_sections::ALL_DOCS'
-    - run: echo '::set-env name=doc_dir::docs_out'
+    - run: echo "doxygen_exclude=src/testfile2.h" >> $GITHUB_ENV
+    - run: echo "doxygen_enabled_sections=ALL_DOCS" >> $GITHUB_ENV
+    - run: echo "doc_dir=docs_out" >> $GITHUB_ENV
     - run: mkdir -p docs_out
     - run: pwd docs_out
     - run: VER=`grep -i sdk_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`
