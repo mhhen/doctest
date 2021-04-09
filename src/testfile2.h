@@ -13,7 +13,7 @@
  
  
 /**
- * Do this function and be happy forever test.
+ * Do this function and be happy forever.
  *
  * @param enable Use true to enable, false to disable.
  * @param level Happiness level to enable.
