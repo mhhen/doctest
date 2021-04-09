@@ -20,7 +20,7 @@ jobs:
     - run: mkdir -p docs_out
     - run: pwd docs_out
     - run: VER=`grep -i sdk_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`
-    - run: VER=`grep -i sdk_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`; VER_MAJOR=`grep -i sdk_major_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`; VER_MINOR=`grep -i sdk_minor_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`; echo '::set-env name=MY_VER::"${VER}_${VER_MAJOR}_${VER_MINOR}"'
+    - run: VER=`grep -i sdk_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`; VER_MAJOR=`grep -i sdk_major_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`; VER_MINOR=`grep -i sdk_minor_version src/versions.h | sed 's/\s\+/,/g' | cut -d, -f3`; echo 'MY_VER="${VER}_${VER_MAJOR}_${VER_MINOR}" >> $GITHUB_ENV'
     - run: echo $MY_VER
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
