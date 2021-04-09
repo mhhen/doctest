@@ -29,7 +29,7 @@ jobs:
           working-directory: .
     - run: ls docs_out
     
-    # Deploy the HTML documentation to GitHub Pages
+    # Deploy the HTML documentation to GitHub Pages. Use branch name as root folder, extracted from repo URL. See "${GITHUB_REF##*/".
     - name: GH Pages Deployment
       uses: peaceiris/actions-gh-pages@v3.7.0-8
       with:
@@ -39,4 +39,4 @@ jobs:
         allow_empty_commit: false
         force_orphan: true
         publish_branch: gh-pages
-        destination_dir: testdir
+        destination_dir: ${GITHUB_REF##*/}/html
